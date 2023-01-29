@@ -1,16 +1,23 @@
-# weather_app
+# Tiny flutter weather
 
-Weather app
+Tiny weather app created using flutter.  
+
+![Screenshot of the app displaying the main screen, showing the weather in Warsaw, Poland](/artwork/screenshot-1.png?raw=true)
+
+This app uses a clean architecture along with BLoC and RxDart for state management.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To build and run this app you will have to obtain [VisualCrossing Weather](https://www.visualcrossing.com) and [Google Places](https://developers.google.com/maps/documentation/places/web-service/overview) API Keys.  
+Both APIs are free of charge for personal use.
 
-A few resources to get you started if this is your first Flutter project:
+```
+# Download dependencies
+flutter pub get
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Run code generation
+flutter pub run build_runner build --delete-conflicting-outputs
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Build&run app 
+flutter run --dart-define="PLACES_API_KEY=<INSERT_GOOGLE_PLACES_API_KEY_HERE>" --dart-define="VS_CROSSING_API_KEY=<INSERT_VISUAL_CROSSING_API_KEY_HERE>"
+```

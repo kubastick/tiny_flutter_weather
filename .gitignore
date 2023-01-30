@@ -9,6 +9,7 @@
 .history
 .svn/
 migrate_working_dir/
+/*.sh
 
 # IntelliJ related
 *.iml
@@ -37,6 +38,7 @@ migrate_working_dir/
 *.g.dart
 *.chopper.dart
 *.config.dart
+*.mocks.dart
 
 # Symbolication related
 app.*.symbols
@@ -49,3 +51,5 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+# FVM
+.fvm/

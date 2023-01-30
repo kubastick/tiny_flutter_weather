@@ -1,0 +1,28 @@
+name: Build flutter app
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Flutter action
+        uses: subosito/flutter-action@v2.8.0
+        with:
+          flutter-version: '3.3.10'
+      - name: Double check flutter version
+        run: flutter --version
+      - name: Get dependencies
+        run: flutter pub get
+      - name: Generate translation keys
+        run: flutter pub run easy_localization:generate -S ./assets/translations -f keys -o locale_keys.g.dart
+      - name: Run build_runner
+        run: flutter pub run build_runner build --delete-conflicting-outputs
+      - name: Run tests
+        run: flutter test

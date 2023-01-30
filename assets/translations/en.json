@@ -1,0 +1,9 @@
+{
+  "home_page": {
+    "today": "Today"
+  },
+  "select_city_page": {
+    "title": "Select city",
+    "type_city_name_here_hint": "Type city name here..."
+  }
+}

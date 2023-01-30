@@ -1,4 +1,4 @@
-# Tiny flutter weather
+# Tiny flutter weather - WIP
 
 Tiny weather app created using flutter.  
 
@@ -17,6 +17,9 @@ flutter pub get
 
 # Run code generation
 flutter pub run build_runner build --delete-conflicting-outputs
+
+# Generate translations
+flutter pub run easy_localization:generate -S ./assets/translations -f keys -o locale_keys.g.dart
 
 # Build&run app 
 flutter run --dart-define="PLACES_API_KEY=<INSERT_GOOGLE_PLACES_API_KEY_HERE>" --dart-define="VS_CROSSING_API_KEY=<INSERT_VISUAL_CROSSING_API_KEY_HERE>"

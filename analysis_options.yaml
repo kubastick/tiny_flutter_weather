@@ -8,6 +8,7 @@ analyzer:
     - "**.chopper.dart"
     - "**.config.dart"
     - "**.freezed.dart"
+    - "**.mocks.dart"
 
 linter:
   rules:

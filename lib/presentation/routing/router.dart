@@ -19,10 +19,10 @@ class HomeRoute extends GoRouteData {
   const HomeRoute();
 
   @override
-  Widget build(BuildContext context) => const HomePage();
+  Widget build(BuildContext context, GoRouterState state) => const HomePage();
 }
 
 class SelectCityPageRoute extends GoRouteData {
   @override
-  Widget build(BuildContext context) => const SelectCityPage();
+  Widget build(BuildContext context, GoRouterState state) => const SelectCityPage();
 }
